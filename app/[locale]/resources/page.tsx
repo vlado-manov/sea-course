@@ -101,7 +101,7 @@ export default async function ResourcesPage({ params }: ResourcesPageProps) {
             <ChevronRight className="h-3 w-3" />
             <span style={{ color: "var(--color-foreground)" }}>{isBg ? "Ресурси" : "Resources"}</span>
           </nav>
-          <h1 className="text-3xl sm:text-5xl font-bold tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-foreground">
             {isBg ? "Ресурси" : "Resources"}
           </h1>
           <p className="mt-4 text-lg max-w-2xl" style={{ color: "var(--color-muted-foreground)" }}>
@@ -150,7 +150,7 @@ export default async function ResourcesPage({ params }: ResourcesPageProps) {
       {/* Official resources */}
       <section className="py-12 border-t" style={{ borderColor: "var(--color-border)", backgroundColor: "color-mix(in srgb, var(--color-muted) 20%, transparent)" }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold mb-8">
+          <h2 className="text-2xl font-bold mb-8 text-foreground">
             {isBg ? "Официални ресурси" : "Official Resources"}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

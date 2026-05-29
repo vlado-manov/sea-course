@@ -41,7 +41,7 @@ export default async function TutorialsPage({ params }: TutorialsPageProps) {
               {tutorials.length}+ {isBg ? "урока" : "tutorials"}
             </div>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-bold tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-foreground">
             {isBg ? "Всички уроци" : "All Tutorials"}
           </h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl">
@@ -56,7 +56,7 @@ export default async function TutorialsPage({ params }: TutorialsPageProps) {
       {featured.length > 0 && (
         <section className="py-12 border-b border-border/40">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-lg font-semibold mb-6 flex items-center gap-2">
+            <h2 className="text-lg font-semibold mb-6 flex items-center gap-2 text-foreground">
               <Sparkles className="h-4 w-4 text-amber-500" />
               {isBg ? "Препоръчани уроци" : "Featured tutorials"}
             </h2>

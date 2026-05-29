@@ -1,7 +1,57 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx create-next-app@latest . --typescript --tailwind --app --no-src-dir --no-import-alias --eslint)"
+      "Bash(npx create-next-app@latest . --typescript --tailwind --app --no-src-dir --no-import-alias --eslint)",
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(npm run *)",
+      "Bash(npm list *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/bg)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/bg/tutorials)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/bg/tutorials/ai-seo-basics)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/bg/tools)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/bg/glossary)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/bg/guides/merchant-center)",
+      "Bash(curl -sL -o /dev/null -w \"%{http_code}\" -H \"Accept-Language: bg\" http://localhost:3000/bg/tutorials)",
+      "Bash(curl -sL -o /dev/null -w \"%{http_code}\" http://localhost:3000/bg/tutorials/ai-seo-basics)",
+      "Bash(curl -sL -o /dev/null -w \"%{http_code}\" http://localhost:3000/en/tutorials)",
+      "Bash(curl -s http://localhost:3000/bg -o /dev/null -w \"%{http_code}\")",
+      "WebFetch(domain:localhost)",
+      "Bash(curl -s \"http://localhost:3000/bg\")",
+      "Bash(curl -s \"http://localhost:3000/bg/tutorials/ai-seo-basics\")",
+      "Bash(python3 -c ' *)",
+      "Bash(node -e ' *)",
+      "Bash(curl -s \"http://localhost:3000/bg/tutorials/ai-seo-basics\" -H \"Cache-Control: no-cache\")",
+      "Bash(curl -v \"http://localhost:3000/bg/tutorials/ai-seo-basics\")",
+      "Bash(curl -sL \"http://localhost:3000/bg/tutorials/ai-seo-basics\")",
+      "Bash(mkdir -p /Users/vladimirmanov/Projects/seo-tutorial/app/\\\\[locale\\\\]/clients)",
+      "Bash(curl -sL \"http://localhost:3000/bg/clients\")",
+      "Bash(curl -sL \"http://localhost:3000/bg\")",
+      "Bash(curl -sL \"http://localhost:3000/bg/tutorials/llm-optimization\")",
+      "Bash(curl -sL \"http://localhost:3000/bg/tutorials/geo-optimization\")",
+      "Bash(git remote *)",
+      "Bash(git add *)",
+      "Bash(git restore *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(grep -n \"^\\\\`[^\\\\`]\" /Users/vladimirmanov/Projects/seo-tutorial/lib/content/fullContent/entity-seo.ts)",
+      "Bash(grep -n \" \\\\`[a-zA-Z]\" /Users/vladimirmanov/Projects/seo-tutorial/lib/content/fullContent/entity-seo.ts)",
+      "Bash(grep -v \"^\\\\`\\\\`\\\\`\\\\|\\\\\\\\\\\\\\\\n\")",
+      "Bash(sed -i '' 's/^```$/\\\\\\\\`\\\\\\\\`\\\\\\\\`/g' /Users/vladimirmanov/Projects/seo-tutorial/lib/content/fullContent/entity-seo.ts)",
+      "Bash(sed -i '' 's/^```$/\\\\\\\\`\\\\\\\\`\\\\\\\\`/g' /Users/vladimirmanov/Projects/seo-tutorial/lib/content/fullContent/ai-visibility-strategy.ts)",
+      "Bash(grep -n \"^\\\\`\\\\`\\\\`\" /Users/vladimirmanov/Projects/seo-tutorial/lib/content/fullContent/entity-seo.ts)",
+      "Bash(grep -n '```' /Users/vladimirmanov/Projects/seo-tutorial/lib/content/fullContent/entity-seo.ts)",
+      "Bash(curl -sL \"http://localhost:3000/bg/tutorials/entity-seo\")",
+      "Bash(curl -sL \"http://localhost:3000/bg/tutorials/ai-visibility-strategy\")",
+      "Bash(mkdir -p /Users/vladimirmanov/Projects/seo-tutorial/app/\\\\[locale\\\\]/questions)",
+      "Bash(curl -sL \"http://localhost:3000/bg/questions\")",
+      "Bash(claude --usage)",
+      "Bash(grep -n \"<h[1-6] \\\\|<h[1-6]$\" \"/Users/vladimirmanov/Projects/seo-tutorial/components/home/Hero.tsx\" \"/Users/vladimirmanov/Projects/seo-tutorial/components/home/CoursePaths.tsx\" \"/Users/vladimirmanov/Projects/seo-tutorial/components/home/GlossaryPreview.tsx\" \"/Users/vladimirmanov/Projects/seo-tutorial/components/home/ToolsPreview.tsx\" \"/Users/vladimirmanov/Projects/seo-tutorial/components/home/CTASection.tsx\")",
+      "Bash(curl -s http://localhost:3000/bg/questions)",
+      "Read(//tmp/**)"
+    ],
+    "additionalDirectories": [
+      "/Users/vladimirmanov/Projects/seo-tutorial/app/[locale]"
     ]
   }
 }

@@ -189,6 +189,12 @@ html {
   animation: page-in 0.3s ease-out;
 }
 
+/* Ensure all headings always follow the theme foreground color.
+   Tailwind utilities override this since they have higher specificity. */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-foreground);
+}
+
 /* Force prose heading colors — ReactMarkdown headings have no classes,
    so dark:prose-headings: utilities don't reach them. */
 .prose h1,

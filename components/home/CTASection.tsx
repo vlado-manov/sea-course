@@ -23,7 +23,7 @@ export function CTASection({ locale }: CTASectionProps) {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
             {isBg
               ? "Какво правиш след като разбереш?"
               : "What do you do after you understand?"}

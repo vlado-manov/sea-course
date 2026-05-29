@@ -3,8 +3,13 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { HelpCircle, Trash2, Clock, BookOpen, ArrowRight, StickyNote, AlertCircle } from "lucide-react";
-import { loadUnclearItems, deleteUnclearItem, type UnclearItem } from "@/components/tutorial/UnclearSection";
+import {
+  HelpCircle, Trash2, Clock, BookOpen, ArrowRight, StickyNote,
+  AlertCircle, MessageSquare, Send, X, CheckCircle2, CornerDownLeft,
+} from "lucide-react";
+import {
+  loadUnclearItems, deleteUnclearItem, saveReply, deleteReply, type UnclearItem,
+} from "@/components/tutorial/UnclearSection";
 import { cn } from "@/lib/utils";
 
 function formatDate(iso: string, locale: string): string {
@@ -35,6 +40,8 @@ export default function QuestionsPage() {
   const [items, setItems] = useState<UnclearItem[]>([]);
   const [mounted, setMounted] = useState(false);
   const [deletingId, setDeletingId] = useState<string | null>(null);
+  const [replyingId, setReplyingId] = useState<string | null>(null);
+  const [replyText, setReplyText] = useState("");
 
   useEffect(() => {
     setItems(loadUnclearItems().sort((a, b) =>
@@ -52,6 +59,33 @@ export default function QuestionsPage() {
     }, 300);
   }
 
+  function handleStartReply(id: string, existing?: string) {
+    setReplyingId(id);
+    setReplyText(existing ?? "");
+  }
+
+  function handleCancelReply() {
+    setReplyingId(null);
+    setReplyText("");
+  }
+
+  function handleSubmitReply(id: string) {
+    if (!replyText.trim()) return;
+    const updated = saveReply(id, replyText);
+    setItems(updated.sort((a, b) =>
+      new Date(b.submittedAt).getTime() - new Date(a.submittedAt).getTime()
+    ));
+    setReplyingId(null);
+    setReplyText("");
+  }
+
+  function handleDeleteReply(id: string) {
+    const updated = deleteReply(id);
+    setItems(updated.sort((a, b) =>
+      new Date(b.submittedAt).getTime() - new Date(a.submittedAt).getTime()
+    ));
+  }
+
   const grouped = groupByTutorial(items);
 
   return (
@@ -63,13 +97,13 @@ export default function QuestionsPage() {
             <HelpCircle className="h-3.5 w-3.5" />
             {isBg ? "Моите бележки" : "My notes"}
           </div>
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-3">
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-3">
             {isBg ? "Неясноти и въпроси" : "Unclear items and questions"}
           </h1>
           <p className="text-muted-foreground leading-relaxed max-w-2xl">
             {isBg
-              ? "Всичко, което си записал по време на обучението. Прегледай, изчисти и продължи напред."
-              : "Everything you noted during learning. Review, clear, and move forward."}
+              ? "Всичко, което си записал по време на обучението. Прегледай, отговори си и продължи напред."
+              : "Everything you noted during learning. Review, reply to yourself, and move forward."}
           </p>
           {mounted && items.length > 0 && (
             <div className="mt-4 flex items-center gap-3 text-sm text-muted-foreground">
@@ -152,26 +186,110 @@ export default function QuestionsPage() {
                       <div
                         key={item.id}
                         className={cn(
-                          "group rounded-xl border border-border bg-card p-4 transition-all duration-300",
+                          "group rounded-xl border border-border bg-card transition-all duration-300",
                           deletingId === item.id && "opacity-0 scale-95"
                         )}
                       >
-                        <p className="text-sm text-foreground leading-relaxed whitespace-pre-wrap mb-3">
-                          {item.text}
-                        </p>
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                            <Clock className="h-3 w-3" />
-                            {formatDate(item.submittedAt, locale)}
+                        {/* Note body */}
+                        <div className="p-4">
+                          <p className="text-sm text-foreground leading-relaxed whitespace-pre-wrap mb-3">
+                            {item.text}
+                          </p>
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                              <Clock className="h-3 w-3" />
+                              {formatDate(item.submittedAt, locale)}
+                            </div>
+                            <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                              <button
+                                onClick={() => handleStartReply(item.id, item.reply)}
+                                className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors"
+                              >
+                                <MessageSquare className="h-3.5 w-3.5" />
+                                {item.reply
+                                  ? (isBg ? "Редактирай отговора" : "Edit reply")
+                                  : (isBg ? "Отговори" : "Reply")}
+                              </button>
+                              <span className="text-muted-foreground/30">·</span>
+                              <button
+                                onClick={() => handleDelete(item.id)}
+                                className="flex items-center gap-1 text-xs text-muted-foreground hover:text-rose-500 transition-colors"
+                              >
+                                <Trash2 className="h-3.5 w-3.5" />
+                                {isBg ? "Изтрий" : "Delete"}
+                              </button>
+                            </div>
                           </div>
-                          <button
-                            onClick={() => handleDelete(item.id)}
-                            className="flex items-center gap-1 text-xs text-muted-foreground hover:text-rose-500 transition-colors opacity-0 group-hover:opacity-100"
-                          >
-                            <Trash2 className="h-3.5 w-3.5" />
-                            {isBg ? "Изтрий" : "Delete"}
-                          </button>
                         </div>
+
+                        {/* Existing reply */}
+                        {item.reply && replyingId !== item.id && (
+                          <div className="border-t border-border/40 bg-primary/5 rounded-b-xl px-4 py-3">
+                            <div className="flex items-start gap-2">
+                              <CornerDownLeft className="h-3.5 w-3.5 text-primary shrink-0 mt-0.5" />
+                              <div className="flex-1 min-w-0">
+                                <p className="text-xs font-semibold text-primary mb-1">
+                                  {isBg ? "Моят отговор" : "My reply"}
+                                </p>
+                                <p className="text-sm text-foreground leading-relaxed whitespace-pre-wrap">
+                                  {item.reply}
+                                </p>
+                                {item.repliedAt && (
+                                  <p className="text-xs text-muted-foreground mt-1.5 flex items-center gap-1">
+                                    <Clock className="h-2.5 w-2.5" />
+                                    {formatDate(item.repliedAt, locale)}
+                                  </p>
+                                )}
+                              </div>
+                              <button
+                                onClick={() => handleDeleteReply(item.id)}
+                                className="shrink-0 text-muted-foreground/50 hover:text-rose-500 transition-colors opacity-0 group-hover:opacity-100"
+                                title={isBg ? "Изтрий отговора" : "Delete reply"}
+                              >
+                                <X className="h-3.5 w-3.5" />
+                              </button>
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Reply form */}
+                        {replyingId === item.id && (
+                          <div className="border-t border-border/40 bg-primary/5 rounded-b-xl px-4 py-3">
+                            <div className="flex items-center gap-2 mb-2">
+                              <CornerDownLeft className="h-3.5 w-3.5 text-primary" />
+                              <p className="text-xs font-semibold text-primary">
+                                {isBg ? "Напиши отговор" : "Write a reply"}
+                              </p>
+                            </div>
+                            <textarea
+                              value={replyText}
+                              onChange={(e) => setReplyText(e.target.value)}
+                              placeholder={isBg
+                                ? "Сега, след като прочетох/научих повече, разбирам, че…"
+                                : "Now that I've read/learned more, I understand that…"}
+                              rows={3}
+                              autoFocus
+                              className="w-full rounded-xl border border-border bg-card px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/60 resize-none focus:outline-none focus:ring-2 focus:ring-primary/40 transition-colors"
+                            />
+                            <div className="flex items-center justify-end gap-2 mt-2">
+                              <button
+                                onClick={handleCancelReply}
+                                className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors px-3 py-1.5 rounded-lg hover:bg-muted/40"
+                              >
+                                <X className="h-3.5 w-3.5" />
+                                {isBg ? "Откажи" : "Cancel"}
+                              </button>
+                              <button
+                                onClick={() => handleSubmitReply(item.id)}
+                                disabled={!replyText.trim()}
+                                className="flex items-center gap-1.5 text-xs font-semibold text-primary-foreground bg-primary hover:bg-primary/90 transition-colors px-3 py-1.5 rounded-lg disabled:opacity-40 disabled:cursor-not-allowed"
+                              >
+                                <Send className="h-3.5 w-3.5" />
+                                {isBg ? "Запиши отговора" : "Save reply"}
+                              </button>
+                            </div>
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>

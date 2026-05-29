@@ -284,7 +284,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
           <div className="flex items-start gap-4">
             <span className="text-5xl">{guide.emoji}</span>
             <div>
-              <h1 className="text-2xl sm:text-4xl font-bold tracking-tight">
+              <h1 className="text-2xl sm:text-4xl font-bold tracking-tight text-foreground">
                 {guide.title[locale as "bg" | "en"]}
               </h1>
               <p className="mt-2 text-muted-foreground">{guide.desc[locale as "bg" | "en"]}</p>
@@ -301,7 +301,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         {/* Sections */}
         {guide.sections.map((section, i) => (
           <div key={i} className="rounded-2xl border border-border bg-card p-6 sm:p-8">
-            <h2 className="text-xl font-bold mb-4">
+            <h2 className="text-xl font-bold mb-4 text-foreground">
               {section.title[locale as "bg" | "en"]}
             </h2>
             <div className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
@@ -330,7 +330,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         {/* Official links */}
         {guide.officialLinks && (
           <div className="rounded-2xl border border-border bg-muted/20 p-6">
-            <h3 className="font-semibold mb-4 flex items-center gap-2">
+            <h3 className="font-semibold mb-4 flex items-center gap-2 text-foreground">
               <ExternalLink className="h-4 w-4 text-primary" />
               {isBg ? "Официални ресурси" : "Official Resources"}
             </h3>

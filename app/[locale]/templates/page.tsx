@@ -264,7 +264,7 @@ export default async function TemplatesPage({ params }: TemplatesPageProps) {
             <ChevronRight className="h-3 w-3" />
             <span className="text-foreground">{isBg ? "Шаблони" : "Templates"}</span>
           </nav>
-          <h1 className="text-3xl sm:text-5xl font-bold tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-foreground">
             {isBg ? "Шаблони" : "Templates"}
           </h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl">

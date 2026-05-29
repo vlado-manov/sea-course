@@ -136,7 +136,7 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
                 )}
               </div>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight text-foreground">
                 {tutorial.title[locale as "bg" | "en"]}
               </h1>
 
@@ -225,7 +225,7 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
                   {/* FAQ Section */}
                   {content.faq && content.faq.length > 0 && (
                     <div className="mt-12 rounded-2xl border border-border bg-muted/20 p-6 sm:p-8">
-                      <h2 className="text-xl font-bold mb-6">
+                      <h2 className="text-xl font-bold mb-6 text-foreground">
                         {isBg ? "Често задавани въпроси" : "Frequently Asked Questions"}
                       </h2>
                       <div className="space-y-6">
@@ -352,7 +352,7 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
               {/* Related tutorials (only for non-learning-path tutorials) */}
               {!tutorial.learningMeta && related.length > 0 && (
                 <div className="mt-12">
-                  <h2 className="text-xl font-bold mb-6">
+                  <h2 className="text-xl font-bold mb-6 text-foreground">
                     {isBg ? "Свързани уроци" : "Related Tutorials"}
                   </h2>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

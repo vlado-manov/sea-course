@@ -138,7 +138,7 @@ export function CoursePaths({ locale }: CoursePathsProps) {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
             {isBg ? "Учебният маршрут: 5 станции" : "The Learning Path: 5 Stations"}
           </h2>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto">

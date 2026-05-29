@@ -419,7 +419,7 @@ export default function ClientsPage() {
             <Users className="h-3.5 w-3.5" />
             {content.hero.badge}
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight mb-5">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight mb-5 text-foreground">
             {content.hero.title}
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mb-8">

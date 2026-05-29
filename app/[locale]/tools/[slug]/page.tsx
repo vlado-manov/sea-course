@@ -76,7 +76,7 @@ export default async function ToolPage({ params }: ToolPageProps) {
                     {toolCategoryLabels[locale as "bg" | "en"][tool.category]}
                   </span>
                 </div>
-                <h1 className="text-2xl sm:text-3xl font-bold">{tool.name}</h1>
+                <h1 className="text-2xl sm:text-3xl font-bold text-foreground">{tool.name}</h1>
                 <p className="text-muted-foreground mt-1">{tool.tagline[locale as "bg" | "en"]}</p>
               </div>
             </div>

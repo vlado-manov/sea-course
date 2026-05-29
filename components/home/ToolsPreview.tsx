@@ -105,7 +105,7 @@ export function ToolsPreview({ locale }: ToolsPreviewProps) {
           className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-12 gap-6"
         >
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
               {isBg ? "Директория с инструменти" : "Tools Directory"}
             </h2>
             <p className="mt-3 text-muted-foreground max-w-xl">

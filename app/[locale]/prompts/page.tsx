@@ -348,7 +348,7 @@ export default function PromptsPage({ params }: { params: { locale: string } }) 
               {prompts.length} {isBg ? "промпта" : "prompts"}
             </div>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-bold tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-foreground">
             {isBg ? "AI Промпти за SEO" : "AI Prompts for SEO"}
           </h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl">
