@@ -1,5 +1,7 @@
 import { geoOptimizationContent } from "./fullContent/geo-optimization";
 import { llmOptimizationContent } from "./fullContent/llm-optimization";
+import { entitySeoContent } from "./fullContent/entity-seo";
+import { aiVisibilityStrategyContent } from "./fullContent/ai-visibility-strategy";
 
 export interface TutorialContent {
   slug: string;
@@ -13,6 +15,8 @@ export interface TutorialContent {
 export const tutorialContents: Record<string, TutorialContent> = {
   "geo-optimization": geoOptimizationContent,
   "llm-optimization": llmOptimizationContent,
+  "entity-seo": entitySeoContent,
+  "ai-visibility-strategy": aiVisibilityStrategyContent,
   "ai-seo-basics": {
     slug: "ai-seo-basics",
     toc: [
