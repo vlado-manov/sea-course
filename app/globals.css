@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/* Make dark: utilities respond to the .dark class (set by next-themes)
+   instead of the default prefers-color-scheme media query. */
+@custom-variant dark (&:is(.dark *));
+
 @theme {
   /* Color system */
   --color-background: hsl(0 0% 100%);

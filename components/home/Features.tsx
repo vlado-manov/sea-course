@@ -120,7 +120,7 @@ export function Features({ locale }: FeaturesProps) {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
             {isBg
               ? "Три промени, които трябва да разбереш"
               : "Three shifts you need to understand"}
@@ -154,7 +154,7 @@ export function Features({ locale }: FeaturesProps) {
 
                   <div className="flex-1 min-w-0">
                     {/* Question heading */}
-                    <h3 className="font-bold text-xl text-slate-900 dark:text-white mb-2 leading-snug">
+                    <h3 className="font-bold text-xl text-foreground mb-2 leading-snug">
                       {item.question}
                     </h3>
 
@@ -196,7 +196,7 @@ export function Features({ locale }: FeaturesProps) {
                     {/* Key insight */}
                     <div className="flex items-start gap-2">
                       <ArrowRight className={`h-4 w-4 mt-0.5 shrink-0 ${style.arrowColor}`} />
-                      <p className="text-sm font-semibold text-slate-900 dark:text-white">
+                      <p className="text-sm font-semibold text-foreground">
                         {item.insight}
                       </p>
                     </div>

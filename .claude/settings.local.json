@@ -48,7 +48,13 @@
       "Bash(claude --usage)",
       "Bash(grep -n \"<h[1-6] \\\\|<h[1-6]$\" \"/Users/vladimirmanov/Projects/seo-tutorial/components/home/Hero.tsx\" \"/Users/vladimirmanov/Projects/seo-tutorial/components/home/CoursePaths.tsx\" \"/Users/vladimirmanov/Projects/seo-tutorial/components/home/GlossaryPreview.tsx\" \"/Users/vladimirmanov/Projects/seo-tutorial/components/home/ToolsPreview.tsx\" \"/Users/vladimirmanov/Projects/seo-tutorial/components/home/CTASection.tsx\")",
       "Bash(curl -s http://localhost:3000/bg/questions)",
-      "Read(//tmp/**)"
+      "Read(//tmp/**)",
+      "Bash(node --input-type=module)",
+      "Bash(curl -s http://localhost:3000/bg/tutorials/structured-data -o /dev/null -w \"%{http_code}\")",
+      "Bash(curl -s http://localhost:3000/bg/tutorials/technical-seo-audit -o /dev/null -w \" %{http_code}\")",
+      "Bash(curl -sL http://localhost:3000/bg/tutorials/structured-data -o /dev/null -w \"%{http_code}\")",
+      "Bash(curl -sL http://localhost:3000/bg/tutorials/technical-seo-audit -o /dev/null -w \" %{http_code}\")",
+      "Bash(grep -n '```' /Users/vladimirmanov/Projects/seo-tutorial/lib/content/fullContent/ai-commerce.ts)"
     ],
     "additionalDirectories": [
       "/Users/vladimirmanov/Projects/seo-tutorial/app/[locale]"

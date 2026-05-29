@@ -124,7 +124,7 @@ export default async function CaseStudiesPage({ params }: CaseStudiesPageProps) 
             {caseStudies.map((cs) => (
               <div
                 key={cs.id}
-                className={cn("rounded-2xl border bg-card p-6 sm:p-8", cs.color)}
+                className={cn("rounded-2xl border bg-card p-12 sm:p-8", cs.color)}
               >
                 <div className="flex items-start justify-between mb-4">
                   <span className="text-3xl">{cs.emoji}</span>
