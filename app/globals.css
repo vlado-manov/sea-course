@@ -189,6 +189,26 @@ html {
   animation: page-in 0.3s ease-out;
 }
 
+/* Force prose heading colors — ReactMarkdown headings have no classes,
+   so dark:prose-headings: utilities don't reach them. */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  color: hsl(224 71.4% 4.1%);
+}
+
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3,
+.dark .prose h4,
+.dark .prose h5,
+.dark .prose h6 {
+  color: hsl(210 20% 98%);
+}
+
 .reading-progress {
   position: fixed;
   top: 0;

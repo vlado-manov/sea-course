@@ -48,15 +48,31 @@ function CodeBlock({ language, value }: { language: string; value: string }) {
   );
 }
 
+// Strip {#anchor-id} from heading text and use it as the element id
+function parseHeading(children: React.ReactNode): { id?: string; text: React.ReactNode } {
+  if (typeof children === "string") {
+    const match = children.match(/^(.*?)\s*\{#([^}]+)\}\s*$/);
+    if (match) return { id: match[2], text: match[1].trim() };
+  }
+  if (Array.isArray(children)) {
+    const last = children[children.length - 1];
+    if (typeof last === "string") {
+      const match = last.match(/^(.*?)\s*\{#([^}]+)\}\s*$/);
+      if (match) {
+        const rest = [...children.slice(0, -1), match[1].trim()].filter(Boolean);
+        return { id: match[2], text: rest };
+      }
+    }
+  }
+  return { text: children };
+}
+
 export function ProseContent({ content }: ProseContentProps) {
   return (
     <div className="prose prose-slate dark:prose-invert max-w-none
       prose-headings:font-bold prose-headings:tracking-tight prose-headings:scroll-mt-24
-      prose-headings:text-slate-900 dark:prose-headings:text-slate-50
       prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-border/60
-      prose-h2:text-slate-900 dark:prose-h2:text-white
       prose-h3:text-lg prose-h3:mt-6 prose-h3:mb-3
-      prose-h3:text-slate-800 dark:prose-h3:text-slate-100
       prose-p:text-muted-foreground prose-p:leading-relaxed
       prose-a:text-primary prose-a:no-underline hover:prose-a:underline
       prose-strong:text-foreground prose-strong:font-semibold
@@ -73,6 +89,22 @@ export function ProseContent({ content }: ProseContentProps) {
     >
       <ReactMarkdown
         components={{
+          h1({ children }: any) {
+            const { id, text } = parseHeading(children);
+            return <h1 id={id} className="scroll-mt-24">{text}</h1>;
+          },
+          h2({ children }: any) {
+            const { id, text } = parseHeading(children);
+            return <h2 id={id} className="scroll-mt-24">{text}</h2>;
+          },
+          h3({ children }: any) {
+            const { id, text } = parseHeading(children);
+            return <h3 id={id} className="scroll-mt-24">{text}</h3>;
+          },
+          h4({ children }: any) {
+            const { id, text } = parseHeading(children);
+            return <h4 id={id} className="scroll-mt-24">{text}</h4>;
+          },
           code({ node, className, children, ...props }: any) {
             const match = /language-(\w+)/.exec(className || "");
             const isInline = !match;
