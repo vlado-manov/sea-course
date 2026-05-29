@@ -91,19 +91,19 @@ export function ProseContent({ content }: ProseContentProps) {
         components={{
           h1({ children }: any) {
             const { id, text } = parseHeading(children);
-            return <h1 id={id} className="scroll-mt-24">{text}</h1>;
+            return <h1 id={id} className="scroll-mt-24 text-slate-900 dark:text-white">{text}</h1>;
           },
           h2({ children }: any) {
             const { id, text } = parseHeading(children);
-            return <h2 id={id} className="scroll-mt-24">{text}</h2>;
+            return <h2 id={id} className="scroll-mt-24 text-slate-900 dark:text-white">{text}</h2>;
           },
           h3({ children }: any) {
             const { id, text } = parseHeading(children);
-            return <h3 id={id} className="scroll-mt-24">{text}</h3>;
+            return <h3 id={id} className="scroll-mt-24 text-slate-800 dark:text-slate-100">{text}</h3>;
           },
           h4({ children }: any) {
             const { id, text } = parseHeading(children);
-            return <h4 id={id} className="scroll-mt-24">{text}</h4>;
+            return <h4 id={id} className="scroll-mt-24 text-slate-700 dark:text-slate-200">{text}</h4>;
           },
           code({ node, className, children, ...props }: any) {
             const match = /language-(\w+)/.exec(className || "");
