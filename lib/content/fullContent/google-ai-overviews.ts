@@ -175,9 +175,7 @@ AI Overview предпочита сайтове, покриващи темата
 
 ### Принцип 6: Актуалност на съдържанието
 
-AI Overview за time-sensitive теми (технологии, AI, здраве) предпочита ново съдържание. Актуализирай ключовите статии на 6-месечна база и обновявай `dateModified` в Schema.
-
----
+  AI Overview за time-sensitive теми (технологии, AI, здраве) предпочита ново съдържание. Актуализирай ключовите статии на 6-месечна база и обновявай \`dateModified\` в Schema.
 
 ## Парадоксът: AI Overview може да намали трафика {#paradox}
 
@@ -390,7 +388,7 @@ See the Structured Data tutorial for details. FAQPage Schema directly increases 
 AI Overview prefers sites with exhaustive coverage. But: information density > volume.
 
 **Principle 6: Content freshness**
-For time-sensitive topics, update key articles every 6 months and update `dateModified` in Schema.
+For time-sensitive topics, update key articles every 6 months and update \`dateModified\` in Schema.
 
 ---
 
