@@ -67,6 +67,7 @@ const navCategories = [
       { label: { bg: "AI Промпти", en: "AI Prompts" }, href: "/prompts", icon: Sparkles },
       { label: { bg: "Шаблони", en: "Templates" }, href: "/templates", icon: FileText },
       { label: { bg: "Казуси", en: "Case Studies" }, href: "/case-studies", icon: TrendingUp },
+      { label: { bg: "Моите бележки", en: "My Notes" }, href: "/questions", icon: FileText },
       { label: { bg: "Всички ресурси", en: "All Resources" }, href: "/resources", icon: GraduationCap },
     ],
   },

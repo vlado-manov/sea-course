@@ -11,6 +11,7 @@ import { tutorialContents } from "@/lib/content/tutorialContent";
 import { TableOfContents } from "@/components/tutorial/TableOfContents";
 import { ReadingProgress } from "@/components/tutorial/ReadingProgress";
 import { TutorialCard } from "@/components/tutorial/TutorialCard";
+import { UnclearSection } from "@/components/tutorial/UnclearSection";
 import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/seo/schemas";
 import { SITE_URL } from "@/lib/utils";
 import { cn } from "@/lib/utils";
@@ -362,14 +363,28 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
                 </div>
               )}
 
+              {/* Unclear section */}
+              <UnclearSection
+                tutorialSlug={tutorial.slug}
+                tutorialTitle={tutorial.title[locale as "bg" | "en"]}
+                locale={locale}
+              />
+
               {/* Navigation */}
-              <div className="mt-10 pt-6 border-t border-border/40 flex items-center justify-between">
+              <div className="mt-8 pt-6 border-t border-border/40 flex items-center justify-between">
                 <Link
                   href={`/${locale}/tutorials`}
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <ArrowLeft className="h-4 w-4" />
                   {isBg ? "Обратно към уроците" : "Back to tutorials"}
+                </Link>
+                <Link
+                  href={`/${locale}/questions`}
+                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {isBg ? "Моите бележки" : "My notes"}
+                  <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </article>
