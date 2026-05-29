@@ -1,0 +1,161 @@
+{
+  "nav": {
+    "home": "Начало",
+    "tutorials": "Уроци",
+    "tools": "Инструменти",
+    "glossary": "Речник",
+    "guides": "Ръководства",
+    "resources": "Ресурси",
+    "prompts": "AI Промпти",
+    "caseStudies": "Казуси",
+    "templates": "Шаблони",
+    "search": "Търси...",
+    "searchPlaceholder": "Търси уроци, инструменти, термини...",
+    "darkMode": "Тъмен режим",
+    "lightMode": "Светъл режим",
+    "language": "Език"
+  },
+  "hero": {
+    "badge": "AI SEO Академия 2025",
+    "title": "Овладей",
+    "titleHighlight": "AI SEO & GEO",
+    "titleSuffix": "за Бъдещето",
+    "subtitle": "Пълният курс по AI SEO, Генеративна Оптимизация на Двигатели, Google AI Overviews, Merchant Center, Структурирани Данни и AI Видимост. Научи се да оптимизираш за AI търсачките на бъдещето.",
+    "cta": "Започни безплатно",
+    "ctaSecondary": "Разгледай уроците",
+    "stats": {
+      "tutorials": "Урока",
+      "tools": "Инструмента",
+      "topics": "Теми",
+      "updated": "Актуализирано"
+    }
+  },
+  "features": {
+    "title": "Всичко, което ти трябва за",
+    "titleHighlight": "AI SEO Успех",
+    "subtitle": "От основите до напредналите стратегии — пълна учебна програма за дигиталния маркетинг на бъдещето",
+    "items": {
+      "geo": {
+        "title": "GEO Оптимизация",
+        "desc": "Научи как да оптимизираш съдържанието си за генеративни AI системи и да се появяваш в AI отговорите"
+      },
+      "aiOverviews": {
+        "title": "Google AI Overviews",
+        "desc": "Стратегии за видимост в Google AI резюметата и как да спечелиш featured snippets в AI ерата"
+      },
+      "merchantCenter": {
+        "title": "Merchant Center & AI Пазаруване",
+        "desc": "Оптимизирай продуктовите си листинги за AI пазаруване и Google Shopping с AI"
+      },
+      "schema": {
+        "title": "Структурирани Данни",
+        "desc": "Пълно ръководство за Schema.org, JSON-LD имплементация и богати резултати в търсачките"
+      },
+      "entitySEO": {
+        "title": "Entity SEO",
+        "desc": "Изграждане на семантичен авторитет чрез обекти, Knowledge Graph и entity-based оптимизация"
+      },
+      "technicalSEO": {
+        "title": "Технически SEO",
+        "desc": "Ядро на уеб жизненост, Core Web Vitals, скорост на зареждане и технически одит"
+      },
+      "aiAgents": {
+        "title": "AI Агенти & Автоматизация",
+        "desc": "Изграждане на AI работни потоци за SEO одит, съдържание и техническа оптимизация"
+      },
+      "llmOptimization": {
+        "title": "LLM Оптимизация",
+        "desc": "Как да оптимизираш съдържанието си да бъде цитирано от ChatGPT, Claude, Gemini и Perplexity"
+      }
+    }
+  },
+  "courses": {
+    "title": "Пътеки за учене",
+    "subtitle": "Структурирани програми от основни до напреднали нива",
+    "beginner": "Начинаещ",
+    "intermediate": "Среден",
+    "advanced": "Напреднал",
+    "expert": "Експерт",
+    "lessons": "урока",
+    "duration": "мин.",
+    "startCourse": "Започни курса",
+    "continueCourse": "Продължи"
+  },
+  "tutorials": {
+    "title": "Всички уроци",
+    "subtitle": "Над 50 подробни урока за AI SEO и GEO",
+    "filterBy": "Филтрирай по",
+    "sortBy": "Сортирай по",
+    "all": "Всички",
+    "newest": "Най-нови",
+    "popular": "Най-популярни",
+    "difficulty": "Трудност",
+    "category": "Категория",
+    "readTime": "мин. четене",
+    "viewAll": "Виж всички"
+  },
+  "tools": {
+    "title": "Директория с инструменти",
+    "subtitle": "Всички SEO и AI инструменти на едно място",
+    "free": "Безплатен",
+    "paid": "Платен",
+    "freemium": "Freemium",
+    "visitTool": "Посети инструмента",
+    "viewTutorials": "Виж уроците",
+    "categories": {
+      "analytics": "Анализи",
+      "technical": "Технически",
+      "content": "Съдържание",
+      "ai": "AI",
+      "ecommerce": "Ecommerce",
+      "schema": "Schema",
+      "research": "Проучване"
+    }
+  },
+  "glossary": {
+    "title": "SEO & AI Речник",
+    "subtitle": "Пълен речник с термини от SEO, AI SEO, GEO и цифровия маркетинг",
+    "searchTerms": "Търси термин...",
+    "allTerms": "Всички термини",
+    "relatedTerms": "Свързани термини",
+    "backToGlossary": "Обратно към речника"
+  },
+  "common": {
+    "readMore": "Прочети повече",
+    "learnMore": "Научи повече",
+    "viewAll": "Виж всички",
+    "backTo": "Обратно към",
+    "copy": "Копирай",
+    "copied": "Копирано!",
+    "share": "Сподели",
+    "bookmark": "Отметка",
+    "bookmarked": "В отметките",
+    "download": "Изтегли",
+    "new": "Ново",
+    "updated": "Обновено",
+    "loading": "Зарежда...",
+    "error": "Грешка",
+    "notFound": "Не е намерено",
+    "minutes": "минути",
+    "hours": "часа"
+  },
+  "footer": {
+    "description": "Водещата Bulgarian AI SEO академия. Научи всичко за AI SEO, GEO, Google AI Overviews и оптимизация за бъдещето на търсенето.",
+    "quickLinks": "Бързи връзки",
+    "categories": "Категории",
+    "resources": "Ресурси",
+    "newsletter": "Бюлетин",
+    "newsletterText": "Получавай актуализации за AI SEO и нови ресурси",
+    "emailPlaceholder": "твоят@имейл.com",
+    "subscribe": "Абонирай се",
+    "rights": "Всички права запазени",
+    "privacy": "Поверителност",
+    "terms": "Условия"
+  },
+  "metadata": {
+    "siteTitle": "AI SEO Академия | GEO, AI Overviews, Merchant Center",
+    "siteDescription": "Научи AI SEO, GEO оптимизация, Google AI Overviews, Merchant Center, Структурирани данни и AI видимост. Пълен курс на български.",
+    "ogTitle": "AI SEO Академия — Оптимизирай за AI Бъдещето",
+    "ogDescription": "Пълен ресурс за AI SEO, GEO, Google AI Overviews и оптимизация за генеративни AI системи"
+  }
+}

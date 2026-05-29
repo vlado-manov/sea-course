@@ -1,0 +1,161 @@
+{
+  "nav": {
+    "home": "Home",
+    "tutorials": "Tutorials",
+    "tools": "Tools",
+    "glossary": "Glossary",
+    "guides": "Guides",
+    "resources": "Resources",
+    "prompts": "AI Prompts",
+    "caseStudies": "Case Studies",
+    "templates": "Templates",
+    "search": "Search...",
+    "searchPlaceholder": "Search tutorials, tools, terms...",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "language": "Language"
+  },
+  "hero": {
+    "badge": "AI SEO Academy 2025",
+    "title": "Master",
+    "titleHighlight": "AI SEO & GEO",
+    "titleSuffix": "for the Future",
+    "subtitle": "The complete course on AI SEO, Generative Engine Optimization, Google AI Overviews, Merchant Center, Structured Data, and AI Visibility. Learn to optimize for the AI search engines of the future.",
+    "cta": "Start for free",
+    "ctaSecondary": "Explore tutorials",
+    "stats": {
+      "tutorials": "Tutorials",
+      "tools": "Tools",
+      "topics": "Topics",
+      "updated": "Updated"
+    }
+  },
+  "features": {
+    "title": "Everything you need for",
+    "titleHighlight": "AI SEO Success",
+    "subtitle": "From fundamentals to advanced strategies — a complete curriculum for the future of digital marketing",
+    "items": {
+      "geo": {
+        "title": "GEO Optimization",
+        "desc": "Learn how to optimize your content for generative AI systems and appear in AI-generated answers"
+      },
+      "aiOverviews": {
+        "title": "Google AI Overviews",
+        "desc": "Strategies for visibility in Google AI Overviews and how to win featured snippets in the AI era"
+      },
+      "merchantCenter": {
+        "title": "Merchant Center & AI Shopping",
+        "desc": "Optimize your product listings for AI shopping and Google Shopping with AI"
+      },
+      "schema": {
+        "title": "Structured Data",
+        "desc": "Complete guide to Schema.org, JSON-LD implementation, and rich results in search engines"
+      },
+      "entitySEO": {
+        "title": "Entity SEO",
+        "desc": "Building semantic authority through entities, Knowledge Graph, and entity-based optimization"
+      },
+      "technicalSEO": {
+        "title": "Technical SEO",
+        "desc": "Core Web Vitals, page speed, crawling, indexing, and comprehensive technical auditing"
+      },
+      "aiAgents": {
+        "title": "AI Agents & Automation",
+        "desc": "Build AI workflows for SEO auditing, content optimization, and technical analysis"
+      },
+      "llmOptimization": {
+        "title": "LLM Optimization",
+        "desc": "How to optimize your content to be cited by ChatGPT, Claude, Gemini, and Perplexity"
+      }
+    }
+  },
+  "courses": {
+    "title": "Learning Paths",
+    "subtitle": "Structured programs from beginner to advanced levels",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced",
+    "expert": "Expert",
+    "lessons": "lessons",
+    "duration": "min.",
+    "startCourse": "Start course",
+    "continueCourse": "Continue"
+  },
+  "tutorials": {
+    "title": "All Tutorials",
+    "subtitle": "50+ in-depth tutorials on AI SEO and GEO",
+    "filterBy": "Filter by",
+    "sortBy": "Sort by",
+    "all": "All",
+    "newest": "Newest",
+    "popular": "Most popular",
+    "difficulty": "Difficulty",
+    "category": "Category",
+    "readTime": "min read",
+    "viewAll": "View all"
+  },
+  "tools": {
+    "title": "Tools Directory",
+    "subtitle": "All SEO and AI tools in one place",
+    "free": "Free",
+    "paid": "Paid",
+    "freemium": "Freemium",
+    "visitTool": "Visit tool",
+    "viewTutorials": "View tutorials",
+    "categories": {
+      "analytics": "Analytics",
+      "technical": "Technical",
+      "content": "Content",
+      "ai": "AI",
+      "ecommerce": "Ecommerce",
+      "schema": "Schema",
+      "research": "Research"
+    }
+  },
+  "glossary": {
+    "title": "SEO & AI Glossary",
+    "subtitle": "Complete glossary of SEO, AI SEO, GEO, and digital marketing terms",
+    "searchTerms": "Search term...",
+    "allTerms": "All terms",
+    "relatedTerms": "Related terms",
+    "backToGlossary": "Back to glossary"
+  },
+  "common": {
+    "readMore": "Read more",
+    "learnMore": "Learn more",
+    "viewAll": "View all",
+    "backTo": "Back to",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "share": "Share",
+    "bookmark": "Bookmark",
+    "bookmarked": "Bookmarked",
+    "download": "Download",
+    "new": "New",
+    "updated": "Updated",
+    "loading": "Loading...",
+    "error": "Error",
+    "notFound": "Not found",
+    "minutes": "minutes",
+    "hours": "hours"
+  },
+  "footer": {
+    "description": "The leading Bulgarian AI SEO academy. Learn everything about AI SEO, GEO, Google AI Overviews, and optimization for the future of search.",
+    "quickLinks": "Quick Links",
+    "categories": "Categories",
+    "resources": "Resources",
+    "newsletter": "Newsletter",
+    "newsletterText": "Get updates on AI SEO and new resources",
+    "emailPlaceholder": "your@email.com",
+    "subscribe": "Subscribe",
+    "rights": "All rights reserved",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "metadata": {
+    "siteTitle": "AI SEO Academy | GEO, AI Overviews, Merchant Center",
+    "siteDescription": "Learn AI SEO, GEO optimization, Google AI Overviews, Merchant Center, Structured Data and AI Visibility. Complete course in Bulgarian and English.",
+    "ogTitle": "AI SEO Academy — Optimize for the AI Future",
+    "ogDescription": "Complete resource for AI SEO, GEO, Google AI Overviews, and optimization for generative AI systems"
+  }
+}
