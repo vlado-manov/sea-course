@@ -54,7 +54,10 @@
       "Bash(curl -s http://localhost:3000/bg/tutorials/technical-seo-audit -o /dev/null -w \" %{http_code}\")",
       "Bash(curl -sL http://localhost:3000/bg/tutorials/structured-data -o /dev/null -w \"%{http_code}\")",
       "Bash(curl -sL http://localhost:3000/bg/tutorials/technical-seo-audit -o /dev/null -w \" %{http_code}\")",
-      "Bash(grep -n '```' /Users/vladimirmanov/Projects/seo-tutorial/lib/content/fullContent/ai-commerce.ts)"
+      "Bash(grep -n '```' /Users/vladimirmanov/Projects/seo-tutorial/lib/content/fullContent/ai-commerce.ts)",
+      "Bash(curl -sL http://localhost:3000/bg/tutorials/ai-commerce -o /dev/null -w \"%{http_code}\")",
+      "Bash(curl -sL http://localhost:3000/bg/tutorials/google-ai-overviews -o /dev/null -w \"google-ai-overviews: %{http_code}\\\\n\")",
+      "Bash(curl -sL http://localhost:3000/bg/tutorials/ai-agents-seo -o /dev/null -w \"ai-agents-seo: %{http_code}\\\\n\")"
     ],
     "additionalDirectories": [
       "/Users/vladimirmanov/Projects/seo-tutorial/app/[locale]"

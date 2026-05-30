@@ -5,6 +5,8 @@ import { aiVisibilityStrategyContent } from "./fullContent/ai-visibility-strateg
 import { structuredDataContent } from "./fullContent/structured-data";
 import { technicalSeoAuditContent } from "./fullContent/technical-seo-audit";
 import { aiCommerceContent } from "./fullContent/ai-commerce";
+import { googleAiOverviewsContent } from "./fullContent/google-ai-overviews";
+import { aiAgentsSeoContent } from "./fullContent/ai-agents-seo";
 
 export interface TutorialContent {
   slug: string;
@@ -22,6 +24,9 @@ export const tutorialContents: Record<string, TutorialContent> = {
   "ai-visibility-strategy": aiVisibilityStrategyContent,
   "structured-data": structuredDataContent,
   "technical-seo-audit": technicalSeoAuditContent,
+  "ai-commerce": aiCommerceContent,
+  "google-ai-overviews": googleAiOverviewsContent,
+  "ai-agents-seo": aiAgentsSeoContent,
   "ai-seo-basics": {
     slug: "ai-seo-basics",
     toc: [
